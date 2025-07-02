@@ -41,7 +41,7 @@ let
       inherit name;
       # add the 32 bits drivers if needed
       text = let
-        mesa-drivers = [ mesa.drivers ]
+        mesa-drivers = [ mesa ]
           ++ lib.optional enable32bits pkgsi686Linux.mesa.drivers;
         libvdpau = [ libvdpau-va-gl ]
           ++ lib.optional enable32bits pkgsi686Linux.libvdpau-va-gl;
